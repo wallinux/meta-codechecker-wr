@@ -1,0 +1,31 @@
+From d5296a3e30cf4f1f9f660362232a96dbac73cc1d Mon Sep 17 00:00:00 2001
+Message-Id: <d5296a3e30cf4f1f9f660362232a96dbac73cc1d.1615215532.git.wallinux@gmail.com>
+From: Anders Wallin <anders.wallin@windriver.com>
+Date: Thu, 8 Oct 2020 12:58:39 +0200
+Subject: [PATCH] added RCS gcc options to IGNORED_OPTIONS_GCC
+
+Signed-off-by: Anders Wallin <anders.wallin@windriver.com>
+---
+ analyzer/codechecker_analyzer/buildlog/log_parser.py | 6 +++++-
+ 1 file changed, 5 insertions(+), 1 deletion(-)
+
+diff --git a/analyzer/codechecker_analyzer/buildlog/log_parser.py b/analyzer/codechecker_analyzer/buildlog/log_parser.py
+index 6162b8a0..af8c74a8 100644
+--- a/analyzer/codechecker_analyzer/buildlog/log_parser.py
++++ b/analyzer/codechecker_analyzer/buildlog/log_parser.py
+@@ -164,7 +164,11 @@ IGNORED_OPTIONS_GCC = [
+     '-mxl',
+     # PowerPC SPE Options:
+     '-mfloat-gprs',
+-    '-mabi'
++    '-mabi',
++    # RCS
++    '-fno-guess-branch-probability',
++    '-mtls-dialect',
++    '-march'
+ ]
+ 
+ IGNORED_OPTIONS_GCC = re.compile('|'.join(IGNORED_OPTIONS_GCC))
+-- 
+2.30.1
+
