@@ -13,7 +13,6 @@ RDEPENDS_${PN} += "lttng-tools"
 RDEPENDS_${PN} += "lttng-ust"
 RDEPENDS_${PN} += "minicoredumper"
 RDEPENDS_${PN} += "net-snmp"
-RDEPENDS_${PN} += "ptest-runner"
 RDEPENDS_${PN} += "simplepingpong"
 RDEPENDS_${PN} += "strongswan"
 RDEPENDS_${PN} += "unionmount-testsuite"
@@ -32,7 +31,6 @@ lttng-tools:do_cleanall \
 lttng-ust:do_cleanall \
 minicoredumper:do_cleanall \
 net-snmp:do_cleanall \
-ptest-runner:do_cleanall \
 simplepingpong:do_cleanall \
 strongswan:do_cleanall \
 unionmount-testsuite:do_cleanall \
